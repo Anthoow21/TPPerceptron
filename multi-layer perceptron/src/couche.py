@@ -73,14 +73,3 @@ class CoucheNeurones:
         self.bias -= self.learning_rate * grad_bias
 
         return grad_input
-
-
-if __name__ == "__main__":
-    couche = CoucheNeurones(n_input=3, n_neurons=3, activation='relu', learning_rate=0.01)
-    X = np.array([[1, 2], [3, 4], [5, 6]])  # (3, 2)
-    y_true = ([3, 4])
-    output = couche.forward(X)
-    loss = 0.5 * np.square(y_true - output)
-    loss_output = output - y_true 
-    couche.backward(loss_output)
-    print("Output : ", loss_output)

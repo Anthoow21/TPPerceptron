@@ -36,7 +36,7 @@ def analyser_convergence(X, y, learning_rates=[0.0001, 0.001, 0.01, 0.1, 1.0, 3.
     max_epochs = 100
     for lr in learning_rates:
         perceptron = PerceptronSimple(learning_rate=lr)
-        errors = perceptron.fit(X, y, max_epochs=max_epochs, return_errors=True)
+        errors = perceptron.fit(X, y, max_epochs=max_epochs, return_errors=True, activation_function="heaviside")
         epochs = np.arange(len(errors))
         plt.plot(epochs, errors, label=f'lr={lr}', marker='o', linestyle='-', alpha=0.7)
 

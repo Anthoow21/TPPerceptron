@@ -24,13 +24,26 @@ if __name__ == '__main__':
             print("a. Propagation avant")
             print("b. Rétropropagation")
             print("c. Test XOR")
-            choix = input("Choisissez une option (a-c) : ").strip()
+            print("d. Courbes apprentissage (loss/accuracy)")
+            print("e. Surface de décision 2D")
+            print("f. Comparaison d'architectures")
+            print("g. Analyse sur-apprentissage")
+            choix = input("Choisissez une option (a-g) : ").strip()
             if choix == 'a':
                 test_multicouche.test_forward()
             elif choix == 'b':
                 test_multicouche.test_backward()
             elif choix == 'c':
                 test_multicouche.test_xor()
+            elif choix == 'd':
+                test_multicouche.test_learning_curves()
+            elif choix == 'e':
+                test_multicouche.test_decision_surface()
+            elif choix == 'f':
+                test_multicouche.test_compare_architectures()
+            elif choix == 'g':
+                test_multicouche.test_surapprentissage()
+
 
         elif choix == '3':
             break

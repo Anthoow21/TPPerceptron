@@ -18,8 +18,10 @@ class PerceptronMultiCouches:
             # TODO: Créer les couches successives
             # La dernière couche peut avoir une activation différente
             activation_couche = activation
-            if i == len(architecture) - 2:  # Dernière couche
-                activation_couche = 'sigmoid'  # ou 'softmax' pour multi-classes
+            if i == len(architecture) - 2:
+                activation_couche = 'sigmoid' # ou 'softmax' pour multi-classes
+            else:
+                activation_couche = 'tanh'  
 
             couche = CoucheNeurones(
                 n_input=architecture[i],
@@ -102,6 +104,9 @@ class PerceptronMultiCouches:
 
             if verbose and epoch % 10 == 0:
                 print(f"Époque {epoch:3d} - Loss: {loss:.4f} - Acc: {accuracy:.4f}")
+                print("Poids couche 1 :", self.couches[0].weights)
+                print("Poids couche 2 :", self.couches[1].weights)
+
 
     def predict(self, X):
         """

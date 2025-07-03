@@ -8,10 +8,10 @@ class PerceptronSimple:
         self.weights = None
         self.bias = None
 
-    def fit(self, X, y, max_epochs=100, return_errors=False):
+    def fit(self, X, y, max_epochs=100, return_errors=False, activation_function="tanh"):
         self.weights = np.random.randn(X.shape[1])
         self.bias = 0
-        activation = ActivationFunction("tanh")
+        activation = ActivationFunction(activation_function)
         errors = []
 
         for e in range(max_epochs):
@@ -22,7 +22,7 @@ class PerceptronSimple:
                 y_pred = activation.apply(np.dot(self.weights, x) + self.bias)
                 d = y_true - y_pred
 
-                if d != 0:
+                if np.sign(y_pred) != y_true:
                     self.weights += self.learning_rate * x * d
                     self.bias += self.learning_rate * d
 
