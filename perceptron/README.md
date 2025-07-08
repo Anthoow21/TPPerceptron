@@ -4,14 +4,17 @@
 
 Structure du projet :
 
-perceptron/
-├── main.py
-├── src/
-│ ├── activation.py
-│ └── perceptron.py
-├── tests/
-│ └── test_perceptron.py
-├── README.md
+perceptron/ \
+├── main.py \
+├── src/ \
+│ ├── activation.py \
+│ ├── dataset.py \
+│ ├── perceptron_multi.py \
+│ └── perceptron.py \
+├── tests/ \
+│ ├── test_iris.py \
+│ └── test_perceptron.py \
+├── README.md \
 └── requirements.txt
 
 
@@ -47,8 +50,6 @@ C'est une fonction simple et rapide. Elle garde les gradients non nuls pour x > 
 **Avantage du Leaky ReLU ?**  
 Elle corrige le souci de Relu qui "meurt" quand x < 0. Avec Leaky relu, on a toujours un petit gradient même pour les négatifs.
 
----
-
 ### Exercice 3 : Questions sur le taux d’apprentissage
 
 **Si η est trop grand ?**  
@@ -63,7 +64,6 @@ Je n'ai pas trouvé de "valeure idéal", mais en testant avec un η aux alentour
 **Peut-on faire varier η au cours du temps ?**  
 Oui, on pourrait le faire diminuer progressivement au fil des époques pour facilier l'apprentissage vers la fin.
 
----
 
 ### Exercice 6 : Test de XOR
 
@@ -72,8 +72,6 @@ Le perceptron échoue avec XOR.
 
 **Pourquoi ?**  
 XOR n’est pas linéairement séparable ce qui fait qu'on ne pourra rien faire avec un seul neuronne. Il faudra passer sur du multicouche comme évoquer dans la suite du TP  
-
----
 
 ### Exercice 8 : Convergence
 

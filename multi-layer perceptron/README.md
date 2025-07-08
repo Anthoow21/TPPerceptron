@@ -4,16 +4,16 @@
 
 Structure du projet :
 
-mutli-layer perceptron/
-├── main.py
-├── src/
-│ ├── activation.py
-│ ├── couche.py
-│ └── multicouche.py
-├── tests/
-│ ├── test_couche.py
-│ └── test_multicouche.py
-├── README.md
+mutli-layer perceptron/ \
+├── main.py \
+├── src/ \
+│ ├── activation.py \
+│ ├── couche.py \
+│ └── multicouche.py \
+├── tests/ \
+│ ├── test_couche.py \
+│ └── test_multicouche.py \
+├── README.md \
 └── requirements.txt
 
 
@@ -33,8 +33,6 @@ python main.py
 
 ## Réponses aux questions
 
----
-
 ### Exercice 1.1 - Analyse théorique
 
 **Que signifie concrètement le théorème d'approximation universelle ?**  
@@ -53,14 +51,10 @@ Non, il dit juste que la solution existe, pas qu’on va la trouver facilement.
 **Autres approximateurs vus au lycée ?**  
 Il me semble qu'on avait déjà vu les polynômes de Taylor, mais je n'en ai pas beaucoup de souvenir. J'étais en STI2D et je ne pense pas que l'on ait vu autre chose. 
 
----
-
 ### Exercice 1.2 - Phrase à expliquer
 
 **"Le théorème d’approximation universelle affirme qu’un réseau profond peut exactement retrouver les données d’entraînement."**  
 Oui, il peut "coller" parfaitement aux données, mais ça veut pas dire qu’il va bien généraliser derrière.
-
----
 
 ### Exercice 2.2 - Propagation avant
 
@@ -69,8 +63,6 @@ Faire passer les données à travers toutes les couches pour obtenir une prédic
 
 **Pourquoi une forme matricielle ?**  
 C’est plus rapide, plus propre, et ça permet de faire tourner le réseau sur plusieurs exemples en même temps.
-
----
 
 ### Exercice 3.1 - Test XOR
 

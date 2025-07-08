@@ -1,3 +1,15 @@
+# Explication générale du projet
+
+Ce projet ce décompose en deux TPs : 
+- Perceptron simple
+- Perceptron multi-couche
+
+Pour chacun de ces TP, on retrouve un dossier, respectivement **perceptron** et **multi-layer perceptron**.
+
+Les réponses aux questions du TP sont faites dans les fichiers README de chaque dossier. Chaque TP possède également un fichier *main.py* permettant de lancer un menu pour tester pas mal de fonctionnalités.
+
+Le rapport ci-dessous est donc découpé en deux : un rapport pour le TP1 et un rapport pour le TP2.
+
 # Rapport – TP1 : Perceptron simple
 
 ## 1. Introduction : Contexte et objectifs
@@ -146,7 +158,7 @@ Exemple de résultat pour le problème XOR :
 
 #### Courbe d’apprentissage
 
-<!-- TODO : écrire le texte -->
+Au niveau de la courbe d'apprentissage, on observe logiquement un baisse progressive du loss et une augmentation progressive de l'accuracy.
 
 Courbes de perte et d'accuracy comparée : 
 
@@ -162,10 +174,16 @@ Les principaux avantages des MLP sont qu'ils permettent de résourde des problè
 
 Tout comme le perceptron simple vu au TP1, si on ne choisit pas bien le taux d'apprentissage, cela ne peut jamais converger ou avoir un comportement inattendu.
 
-#### Sur-apprentissage
-
-<!-- TODO : Faire courbe sur-apprentissage dans test_multicouche.py -->
-
 ### 5. Conclusion
 
-<!-- Parler de la vidéo ludique pour MLP -->
+Ce TP m'a permis de comprendre et d'implémenter un réseau multicouche capable de résoudre des problèmes qu'un perceptron simple ne peut pas gérer.
+J'ai aussi vu l'importance des différentes architectures, du choix de la fonction d'activation et du taux d'apprentissage
+La rétropropagation est quelque chose d'assez puissant mais un peu compliqué à comprendre au premier abord. Cela demande un bon équilibrage pour éviter la divergence ou le sur-apprentissage.
+
+### Touche perso
+
+Avant de faire ce cours, j'avais déjà un peu touché à un réseau de neuronne. En effet, une vidéo du youtubeur Laupok (youtubeur multi-gaming faisant surtout des jeux nintendo) parlait des algorithmes génétiques et des réseaux de neuronnes (en vulgarisant bien-sûr) et j'avais bien aimé le concept à l'époque. Sa vidéo est assez intéressante, et je la conseillerai pour apprendre les bases des réseaux de neuronnes, sans trop rentrer dans des calculs complexes. 
+
+Lien de sa vidéo : https://www.youtube.com/watch?v=F63GNXGHVwM&ab_channel=Laupok (réseau de neuronne à partir de 13:30)
+
+Il a mit le code qu'il a utilisé pour faire son réseau de neuronne à disposition ce qui est pas mal pour commencer à apprendre. 
