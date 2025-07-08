@@ -21,7 +21,7 @@ class PerceptronMultiCouches:
             if i == len(architecture) - 2:
                 activation_couche = 'sigmoid' # ou 'softmax' pour multi-classes
             else:
-                activation_couche = 'tanh'  
+                activation_couche = 'tanh'
 
             couche = CoucheNeurones(
                 n_input=architecture[i],
@@ -45,7 +45,6 @@ class PerceptronMultiCouches:
         Rétropropagation à travers tout le réseau
         """
         # TODO: Calculer le gradient initial (dérivée de la fonction de coût)
-        y_true = y_true.reshape(y_pred.shape)
         dA = (y_pred - y_true).T
 
         # Pour l'erreur quadratique : gradient = (y_pred - y_true)
@@ -73,10 +72,6 @@ class PerceptronMultiCouches:
         Calcule la fonction de coût (erreur quadratique moyenne)
         """
         # TODO: Implémenter l'erreur quadratique moyenne
-        y_true = y_true.reshape(-1, 1)
-        y_pred = y_pred.reshape(-1, 1)
-
-        # Erreur quadratique moyenne
         erreur_quadra = np.mean(np.square(y_pred - y_true))
 
         return erreur_quadra

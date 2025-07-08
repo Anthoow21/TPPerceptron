@@ -36,10 +36,7 @@ class CoucheNeurones:
         Propagation avant
         X: matrice d'entrée (n_features, n_samples)
         """
-        # S'assurer que X est de la forme (n_input, n_samples)
-
-        # Calcul de la sortie linéaire
-        z = np.dot(self.weights, X) + self.bias  # (n_neurons, n_samples)
+        z = np.dot(self.weights, X) + self.bias
 
         # Stocker les valeurs intermédiaires pour la rétropropagation
         self.last_input = X

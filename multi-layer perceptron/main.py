@@ -25,7 +25,7 @@ if __name__ == '__main__':
             print("b. Rétropropagation")
             print("c. Test XOR")
             print("d. Courbes apprentissage (loss/accuracy)")
-            print("e. Surface de décision 2D")
+            print("e. Test XOR Visualisation")
             print("f. Comparaison d'architectures")
             print("g. Analyse sur-apprentissage")
             choix = input("Choisissez une option (a-g) : ").strip()
@@ -36,9 +36,9 @@ if __name__ == '__main__':
             elif choix == 'c':
                 test_multicouche.test_xor()
             elif choix == 'd':
-                test_multicouche.test_learning_curves()
+                test_multicouche.test_courbe_apprentissage()
             elif choix == 'e':
-                test_multicouche.test_decision_surface()
+                test_multicouche.test_xor_visualisation()
             elif choix == 'f':
                 test_multicouche.test_compare_architectures()
             elif choix == 'g':

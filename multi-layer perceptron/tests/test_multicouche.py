@@ -82,7 +82,7 @@ def test_xor():
         acc = mlp.compute_accuracy(y_xor, y_pred)
         print(f"Accuracy : {acc:.2f}")
 
-def test_learning_curves():
+def test_courbe_apprentissage():
     X = np.array([[0,0],[0,1],[1,0],[1,1]])
     y = np.array([[0],[1],[1],[0]])
 
@@ -107,7 +107,7 @@ def test_learning_curves():
     plt.tight_layout()
     plt.show()
 
-def test_decision_surface():
+def test_xor_visualisation():
     from matplotlib.colors import ListedColormap
 
     X = np.array([[0,0],[0,1],[1,0],[1,1]])
@@ -149,8 +149,8 @@ def test_surapprentissage():
     y = np.array([[0],[1],[1],[0]])
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.5, random_state=42)
 
-    model = PerceptronMultiCouches([2,6,1], learning_rate=0.5, activation='sigmoid')
-    model.fit(X_train, y_train, X_val, y_val, epochs=500, verbose=False)
+    model = PerceptronMultiCouches([2,9,1], learning_rate=0.5, activation='sigmoid')
+    model.fit(X_train, y_train, X_val, y_val, epochs=5000, verbose=False)
 
     plt.plot(model.history['loss'], label='Train loss')
     plt.plot(model.history['val_loss'], label='Val loss')
